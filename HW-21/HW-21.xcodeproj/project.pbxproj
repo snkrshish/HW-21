@@ -338,7 +338,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L39PH8PX3G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW-21/Info.plist";
+				INFOPLIST_FILE = "HW-21/Resources/Configuration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -366,7 +366,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L39PH8PX3G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW-21/Info.plist";
+				INFOPLIST_FILE = "HW-21/Resources/Configuration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
