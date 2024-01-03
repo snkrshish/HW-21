@@ -9,19 +9,24 @@
 /* Begin PBXBuildFile section */
 		448C280E2B3BE48000DED214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448C280D2B3BE48000DED214 /* AppDelegate.swift */; };
 		448C28102B3BE48000DED214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448C280F2B3BE48000DED214 /* SceneDelegate.swift */; };
-		448C28122B3BE48000DED214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448C28112B3BE48000DED214 /* ViewController.swift */; };
+		448C28122B3BE48000DED214 /* MarvelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448C28112B3BE48000DED214 /* MarvelView.swift */; };
 		448C28172B3BE48100DED214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448C28162B3BE48100DED214 /* Assets.xcassets */; };
 		448C281A2B3BE48100DED214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448C28182B3BE48100DED214 /* LaunchScreen.storyboard */; };
+		448C28292B3BFC9B00DED214 /* MarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448C28282B3BFC9B00DED214 /* MarvelTableViewCell.swift */; };
+		448C282C2B3E6FF400DED214 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 448C282B2B3E6FF400DED214 /* SnapKit */; };
+		44D748FD2B45321D004AEE2E /* MarvelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D748FC2B45321D004AEE2E /* MarvelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		448C280A2B3BE48000DED214 /* HW-21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-21.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		448C280D2B3BE48000DED214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		448C280F2B3BE48000DED214 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		448C28112B3BE48000DED214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		448C28112B3BE48000DED214 /* MarvelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelView.swift; sourceTree = "<group>"; };
 		448C28162B3BE48100DED214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448C28192B3BE48100DED214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		448C281B2B3BE48100DED214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		448C28282B3BFC9B00DED214 /* MarvelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTableViewCell.swift; sourceTree = "<group>"; };
+		44D748FC2B45321D004AEE2E /* MarvelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448C282C2B3E6FF400DED214 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,8 @@
 		448C28242B3BE56500DED214 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				448C28282B3BFC9B00DED214 /* MarvelTableViewCell.swift */,
+				448C28112B3BE48000DED214 /* MarvelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,7 +114,7 @@
 		448C28262B3BE58200DED214 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				448C28112B3BE48000DED214 /* ViewController.swift */,
+				44D748FC2B45321D004AEE2E /* MarvelViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +144,9 @@
 			dependencies = (
 			);
 			name = "HW-21";
+			packageProductDependencies = (
+				448C282B2B3E6FF400DED214 /* SnapKit */,
+			);
 			productName = "HW-21";
 			productReference = 448C280A2B3BE48000DED214 /* HW-21.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 448C28012B3BE48000DED214;
+			packageReferences = (
+				448C282A2B3E6FF400DED214 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 448C280B2B3BE48000DED214 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -190,9 +204,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				448C28122B3BE48000DED214 /* ViewController.swift in Sources */,
+				448C28122B3BE48000DED214 /* MarvelView.swift in Sources */,
 				448C280E2B3BE48000DED214 /* AppDelegate.swift in Sources */,
+				448C28292B3BFC9B00DED214 /* MarvelTableViewCell.swift in Sources */,
 				448C28102B3BE48000DED214 /* SceneDelegate.swift in Sources */,
+				44D748FD2B45321D004AEE2E /* MarvelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		448C282A2B3E6FF400DED214 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		448C282B2B3E6FF400DED214 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 448C282A2B3E6FF400DED214 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 448C28022B3BE48000DED214 /* Project object */;
 }
