@@ -16,6 +16,8 @@
 		448C281A2B3BE48100DED214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448C28182B3BE48100DED214 /* LaunchScreen.storyboard */; };
 		448C28292B3BFC9B00DED214 /* MarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448C28282B3BFC9B00DED214 /* MarvelTableViewCell.swift */; };
 		448C282C2B3E6FF400DED214 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 448C282B2B3E6FF400DED214 /* SnapKit */; };
+		44BD5F8B2B47CAF200E38A0D /* Ext+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BD5F8A2B47CAF200E38A0D /* Ext+String.swift */; };
+		44BD5F8D2B47D1CC00E38A0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BD5F8C2B47D1CC00E38A0D /* Model.swift */; };
 		44D748FD2B45321D004AEE2E /* MarvelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D748FC2B45321D004AEE2E /* MarvelViewController.swift */; };
 		44D749012B453A8B004AEE2E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 44D749002B453A8B004AEE2E /* Podfile */; };
 		FC8954CB592006EF9103CFDB /* libPods-HW-21.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5283675E45D5EB9F2D4104 /* libPods-HW-21.a */; };
@@ -33,6 +35,8 @@
 		448C28192B3BE48100DED214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		448C281B2B3BE48100DED214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		448C28282B3BFC9B00DED214 /* MarvelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTableViewCell.swift; sourceTree = "<group>"; };
+		44BD5F8A2B47CAF200E38A0D /* Ext+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+String.swift"; sourceTree = "<group>"; };
+		44BD5F8C2B47D1CC00E38A0D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		44D748FC2B45321D004AEE2E /* MarvelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewController.swift; sourceTree = "<group>"; };
 		44D749002B453A8B004AEE2E /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		4F5283675E45D5EB9F2D4104 /* libPods-HW-21.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HW-21.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,7 @@
 				448C28262B3BE58200DED214 /* Controller */,
 				442708902B47C6EC00B59D44 /* Network */,
 				448C28272B3BE59400DED214 /* App */,
+				44BD5F892B47CAD500E38A0D /* Ext */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 		448C28252B3BE57D00DED214 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44BD5F8C2B47D1CC00E38A0D /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +156,14 @@
 				448C280F2B3BE48000DED214 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		44BD5F892B47CAD500E38A0D /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				44BD5F8A2B47CAF200E38A0D /* Ext+String.swift */,
+			);
+			path = Ext;
 			sourceTree = "<group>";
 		};
 		7BB99D72CB3E603A378CC6B0 /* Frameworks */ = {
@@ -272,12 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BD5F8D2B47D1CC00E38A0D /* Model.swift in Sources */,
 				448C28122B3BE48000DED214 /* MarvelView.swift in Sources */,
 				442708952B47C75D00B59D44 /* URLRequest.swift in Sources */,
 				448C280E2B3BE48000DED214 /* AppDelegate.swift in Sources */,
 				448C28292B3BFC9B00DED214 /* MarvelTableViewCell.swift in Sources */,
 				442708922B47C74300B59D44 /* URLComponents.swift in Sources */,
 				448C28102B3BE48000DED214 /* SceneDelegate.swift in Sources */,
+				44BD5F8B2B47CAF200E38A0D /* Ext+String.swift in Sources */,
 				44D748FD2B45321D004AEE2E /* MarvelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
