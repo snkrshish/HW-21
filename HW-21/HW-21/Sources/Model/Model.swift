@@ -26,8 +26,8 @@ struct DataClass: Codable {
 // MARK: - Result
 struct FinalResult: Codable {
     let name, description: String?
-    let modified: String
     let thumbnail: Thumbnail
+    let urls: [Urls]
 }
 
 // MARK: - Thumbnail
@@ -44,4 +44,10 @@ struct Thumbnail: Codable {
 enum Extension: String, Codable {
     case gif = "gif"
     case jpg = "jpg"
+}
+
+// MARK: - URLS
+struct Urls: Codable {
+    let type: String
+    let url: String
 }

@@ -3,9 +3,12 @@ import SnapKit
 
 class DetailViewController: UIViewController {
 
+    var detailURL = ""
+
     var detailCharacter: FinalResult? {
         didSet {
             self.nameHero.text = detailCharacter?.name
+            self.detailURL = detailCharacter?.urls.last?.url ?? ""
             guard let imagePath = detailCharacter?.thumbnail.path,
                   let imagePathExtension = detailCharacter?.thumbnail.thumbnailExtension.rawValue,
                   let imageURL = URL(string: imagePath + "." + imagePathExtension)
@@ -34,6 +37,7 @@ class DetailViewController: UIViewController {
 
     private lazy var buttomForMore: UIButton = {
         let buttom = UIButton(type: .system)
+        buttom.addTarget(self, action: #selector(detailButtonPressed), for: .touchUpInside)
         buttom.setTitle("Открыть список комиксов", for: .normal)
         buttom.tintColor = .systemBackground
         buttom.backgroundColor = .systemPink
@@ -49,6 +53,14 @@ class DetailViewController: UIViewController {
         setupLayout()
     }
 
+    //MARK: - Actions
+    @objc private func detailButtonPressed() {
+        guard let url = URL(string: detailURL) else {
+            buttomForMore.titleLabel?.text = "Ссылка не найдена"
+            return
+        }
+        UIApplication.shared.open(url)
+    }
 
 
     //MARK: - Setup

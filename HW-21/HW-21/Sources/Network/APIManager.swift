@@ -33,7 +33,7 @@ class APIManager {
             }
         }
     }
-    
+
     func loadImage(from url: URL, into imageView: UIImageView) {
         if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: url)),
            let image = UIImage(data: cachedResponse.data) {
