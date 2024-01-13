@@ -64,5 +64,8 @@ extension MarvelViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let detailView = DetailViewController()
+        detailView.detailCharacter = characters?[indexPath.row]
+        present(detailView, animated: true)
     }
 }
