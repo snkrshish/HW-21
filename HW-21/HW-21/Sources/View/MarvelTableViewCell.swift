@@ -2,24 +2,40 @@ import UIKit
 import SnapKit
 
 class MarvelTableViewCell: UITableViewCell {
-    static let identifier = "cuustomCell"
+
+    static let identifier = "customCell"
+
+
+    var character: FinalResult? {
+        didSet {
+            self.title.text = character?.name
+            self.descriptionLabel.text = character?.description
+
+            guard let imagePath = character?.thumbnail.path,
+                  let imagePathExtension = character?.thumbnail.thumbnailExtension.rawValue,
+                  let imageURL = URL(string: imagePath + "." + imagePathExtension)
+            else {
+                heroImageView.image = UIImage(named: "swift")
+                return
+            }
+            APIManager.shared.loadImage(from: imageURL, into: heroImageView)
+        }
+    }
+
     //MARK: - Outlets
     private lazy var heroImageView: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(systemName: "airplane")
         image.layer.cornerRadius = image.frame.height / 2
         return image
     }()
 
     private lazy var title: UILabel = {
         let label = UILabel()
-        label.text = "Хухухуху"
         return label
     }()
 
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "хехеех"
         label.textColor = .systemGray
         label.font = .systemFont(ofSize: 10)
         return label
@@ -31,7 +47,7 @@ class MarvelTableViewCell: UITableViewCell {
         setupHierarchy()
         setupLayout()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -42,11 +58,13 @@ class MarvelTableViewCell: UITableViewCell {
         contentView.addSubview(title)
         contentView.addSubview(descriptionLabel)
     }
-    
+
     private func setupLayout() {
         heroImageView.snp.makeConstraints {
-            $0.centerY.equalTo(contentView)
+            $0.top.equalTo(contentView).offset(10)
+            $0.bottom.equalTo(contentView).offset(-10)
             $0.leading.equalTo(contentView).offset(10)
+            $0.width.equalTo(heroImageView.snp.height)
         }
         title.snp.makeConstraints {
             $0.top.equalTo(contentView).offset(5)
@@ -56,7 +74,14 @@ class MarvelTableViewCell: UITableViewCell {
         descriptionLabel.snp.makeConstraints {
             $0.bottom.equalTo(contentView).offset(-5)
             $0.leading.equalTo(heroImageView.snp.trailing).offset(5)
+            $0.trailing.equalTo(contentView).offset(-15)
             $0.top.equalTo(title.snp.bottom).offset(3)
         }
+    }
+
+    //MARK: - Prepare for reuse
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.character = nil
     }
 }
